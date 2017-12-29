@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prettify.js</title>
+	<meta charset="utf-8">
+
+	<!-- 
+	Include the script tag below in your document:
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	See Getting Started to configure that URL with options you need.
+	Look at the skin gallery and pick styles that suit you. 
+	-->
+
+	<!-- 
+	Put code snippets in <pre class="prettyprint">...</pre> or <code class="prettyprint">...</code> and it will automatically be pretty-printed. 
+	-->
+	
+	<link rel="stylesheet" type="text/css" href="./assets/css/algorithm.css">
+	<script src="./prettify/loader/run_prettify.js"></script>
+</head>
+<body>
+<h1>prettify.js</h1>
+<pre>
+	<code class="prettyprint">
+		function selectionSort(arr){
+			var minIndex, temp, len = arr.length;
+			for(var i=0; i < len; i++){
+				minIndex = i;
+				for(var j=i+1; j < len; j++){
+					if(arr[j] < arr[minIndex]){
+						minIndex = j;
+					}
+				}
+				temp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+			return arr;
+		}
+		var num = new Array;
+		num = [1,5,2,8,4,9,3,0,4];
+		console.log(selectionSort(num));
+	</code>
+</pre>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>演示：基于HTML5的有弹幕动能的视频播放器</title>
+<meta name="keywords" content="播放器" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<link rel="stylesheet" type="text/css" href="http://www.helloweba.com/demo/css/main.css" />
+<link rel="stylesheet" href="css/main.css">
+<style type="text/css">
+.demo{width:95%;margin:50px auto 10px auto;padding:10px;}
+</style>
+
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+
+<div id="main" style="width:90%">
+   <h2 class="top_title"><a href="http://www.helloweba.com/view-blog-362.html">基于HTML5的有弹幕动能的视频播放器</a></h2>
+	<div class="demo">
+		<div id="danmup" style="margin:20px auto"></div>
+	</div>
+	
+	
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.shCircleLoader.js"></script>
+<script src="js/jquery.danmu.js"></script>
+<script src="js/main.js"></script>
+<script>
+$("#danmup").DanmuPlayer({
+	src: "http://download4.vlook.cn/a5684621ca91727c801af9b8f944f9aa/5722cc2e/video/vga/fshR.mp4",
+    height: "480px", //区域的高度
+    width: "800px" //区域的宽度
+    ,urlToGetDanmu:"getData.php"
+    ,urlToPostDanmu:"sendData.php"
+  });
+
+  $("#danmup .danmu-div").danmu("addDanmu",[
+    { "text":"这是滚动弹幕" ,color:"white",size:1,position:0,time:2}
+    ,{ "text":"我是帽子绿" ,color:"green",size:1,position:0,time:3}
+    ,{ "text":"哈哈哈啊哈" ,color:"#f30",size:1,position:0,time:10}
+    ,{ "text":"这是黄色的弹幕" ,color:"yellow" ,size:1,position:0,time:3}
+    ,{ "text":"好快啊" , color:"red" ,size:1,position:0,time:19}
+    ,{ "text":"大家好，我是打不死的小强" ,color:"orange",size:1,position:0,time:23}
+
+  ])
+</script>
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+
+</body>
+</html>
